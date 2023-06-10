@@ -1,0 +1,45 @@
+@use "functions" as f;
+
+$default-font-size: 62.5%;
+$font-family: Consolas, sans-serif;
+
+$font-size-px: 24;
+$font-size-m: f.pxToRem($font-size-px);
+$line-height-m: f.pxToRem($font-size-px + 8);
+$font-m: $font-size-m / $line-height-m $font-family;
+
+$font-size-px: 16;
+$font-size-d: f.pxToRem($font-size-px);
+$line-height-d: f.pxToRem($font-size-px + 8);
+$font-m: $font-size-d / $line-height-d $font-family;
+
+:root {
+	--default-font-size: 62.5%;
+	--font-family: Consolas, sans-serif;
+
+	// Font - Medium
+	--font-size-m: 2.4rem;
+	--line-height-m: calc(2.4rem + 0.8rem);
+	--font-m: var(--font-size-m) / var(--line-height-m) var(--font-family);
+
+	// Font - Default
+	--font-size-d: 1.6rem;
+	--line-height-d: calc(1.6rem + 0.8rem);
+	--font-d: var(--font-size-d) / var(--line-height-d) var(--font-family);
+}
+
+@media (prefers-color-scheme: dark) {
+	.theme-a.adaptive {
+		background: #753;
+		color: #dcb;
+		outline: 5px dashed #000;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.theme-a.adaptive {
+		background: #753;
+		color: #dcb;
+		outline: 5px dashed #000;
+	}
+}

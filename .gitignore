@@ -1,0 +1,7 @@
+/build
+/node_modules
+/.idea
+
+.env
+/dev.env
+/prod.env
